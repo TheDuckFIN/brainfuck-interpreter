@@ -6,7 +6,7 @@
 
 int main(int argc, char** argv) {
     
-    FILE* f = open_file("programs/bottles.b");
+    FILE* f = open_file("programs/helloworld.b");
     
     char* program = read_file(f);
     
