@@ -6,3 +6,4 @@ nbdist/
 .nb-gradle/
 .dep.inc
 MakeFile
+brainfuck.exe.stackdump
