@@ -6,14 +6,15 @@
 
 int main(int argc, char** argv) {
     
-    FILE* f = open_file("programs/helloworld.b");
+    if (argc != 2) {
+        printf("Usage: brainfuck <file>\n");
+    }else {
+        FILE* f = open_file(argv[1]);
     
-    char* program = read_file(f);
-    
-    run(program);
-    
-    //printf("Length: %d\n", file_length(f));
-    //printf("Content: %s\n", program);
+        char* program = read_file(f);
+
+        run(program);
+    }
     
     return EXIT_SUCCESS;
 }

@@ -49,9 +49,14 @@ void run(char* program) {
                 
             case '<':
                 pointer--;
+                break;
                 
             case '.':
                 putchar(*pointer);
+                break;
+                
+            case ',':
+                *pointer = getchar();
                 break;
                 
             case '[':
