@@ -6,6 +6,7 @@
 
 FILE* open_file(char path[]);
 int file_length(FILE* f);
+char* read_file(FILE* f);
 
 #endif /* FILE_H */
 

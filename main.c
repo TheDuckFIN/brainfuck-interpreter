@@ -1,31 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "stack.h"
 #include "file.h"
+#include "brainfuck.h"
 
 int main(int argc, char** argv) {
     
-    stack_init();
+    FILE* f = open_file("programs/bottles.b");
     
-    FILE* f = open_file("programs/helloworld.b");
+    char* program = read_file(f);
     
-    int program_length = file_length(f);
+    run(program);
     
-    char* program = (char*)malloc(program_length * sizeof(char));
-    
-    
-    printf("Length: %d\n", file_length(f));
-    
-    /*for(int i = 0; i < 10; i++) {
-        stack_push((i + 1) * 2);
-    }
-    
-    while(!stack_isEmpty()) 
-        printf("Num: %d \n", stack_pop());
-    */
-     
-    stack_destruct();
+    //printf("Length: %d\n", file_length(f));
+    //printf("Content: %s\n", program);
     
     return EXIT_SUCCESS;
 }
