@@ -4,11 +4,10 @@
 #include "stack.h"
 
 int main(int argc, char** argv) {
-    printf("Hello world! \n");
     
     stack_init();
     
-    for(int i = 0; i < 9; i++) {
+    for(int i = 0; i < 1000; i++) {
         stack_push((i + 1) * 2);
     }
     
@@ -16,7 +15,6 @@ int main(int argc, char** argv) {
         printf("Num: %d \n", stack_pop());
     
     stack_destruct();
-    
     
     return EXIT_SUCCESS;
 }
