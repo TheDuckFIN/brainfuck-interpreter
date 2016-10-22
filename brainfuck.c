@@ -4,6 +4,12 @@
 #include "brainfuck.h"
 #include "stack.h"
 
+/*
+ *
+ * TODO: allocate more memory dynamically when size limit hit
+ *
+ */
+
 int MEMORY_SIZE = 100;
 char* memory;
 char* pointer;
